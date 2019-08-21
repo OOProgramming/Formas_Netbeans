@@ -6,11 +6,21 @@ package main;
  */
 public abstract class FormaGeometrica {
 
+    private String nome;
     private String cor;
-    
-    //<editor-fold desc="Getters and Setters">
-    public FormaGeometrica(String cor) {
+
+    public FormaGeometrica(String cor,String nome) {
         this.cor = cor;
+        this.nome = nome;
+    }
+
+    //<editor-fold desc="Getters and Setters">
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCor() {
@@ -22,7 +32,4 @@ public abstract class FormaGeometrica {
     }
     //</editor-fold>
 
-    public abstract String obterCor();
-
-    
 }

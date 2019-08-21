@@ -54,23 +54,20 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
     }
 
     //</editor-fold>
-    public Triangulo(double altura, double base, double A, double B, double C, String cor) {
-        super(cor);
+
+    public Triangulo(double altura, double base, double A, double B, double C, String cor, String nome) {
+        super(cor, nome);
         this.altura = altura;
         this.base = base;
         this.A = A;
         this.B = B;
         this.C = C;
     }
+    
 
     @Override
     public double calcularArea() {
         return (base * altura) / 2;
-    }
-
-    @Override
-    public String obterCor() {
-        return getCor();
     }
 
     @Override
@@ -80,12 +77,14 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
 
     @Override
     public String toString() {
-        return "\nAltura: " + altura + ""
+        return "Nome: "+super.getNome()+""
+                + "Cor: "+super.getCor()+""
+                + "\nAltura: " + altura + ""
                 + "\nBase: " + base + ""
                 + "\nLado A: " + A + ""
                 + "\nLado B: " + B + ""
-                + "\nLado C: " + C+""
-                + "\nArea: "+calcularArea()+""
-                + "\nPerimetro: "+calcularPerimetro();
+                + "\nLado C: " + C + ""
+                + "\nArea: " + calcularArea() + ""
+                + "\nPerimetro: " + calcularPerimetro();
     }
 }

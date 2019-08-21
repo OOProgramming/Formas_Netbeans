@@ -8,11 +8,15 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
 
     private double raio;
 
-    public Esfera(double raio, String cor) {
-        super(cor);
+    public Esfera(double raio, String cor, String nome) {
+        super(cor, nome);
         this.raio = raio;
     }
 
+
+
+    
+    
     //<editor-fold defaultstate="collapsed" desc="Getters and Setters">
     public double getRaio() {
         return raio;
@@ -23,10 +27,7 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
     }
     //</editor-fold>
 
-    @Override
-    public String obterCor() {
-        return getCor();
-    }
+    
 ///
     @Override
     public double calcularVolume() {
@@ -35,7 +36,9 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
 
     @Override
     public String toString() {
-        return "\nRaio: " + raio+""
+        return "Nome: "+super.getNome()+""
+                + "Cor: "+super.getCor()+""
+                + "\nRaio: " + raio+""
                 + "\nVolume: "+calcularVolume();
     }
 
