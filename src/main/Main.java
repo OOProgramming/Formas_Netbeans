@@ -13,31 +13,26 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<FormaGeometrica> formas = new ArrayList<>();
+
         int opcaoMenu = 0;
+        String opcaoTipoDeForma = "";
+        String opcaoFormaBidmensional = "";
+        String opcaoFormaTridmensional = "";
 
         while (opcaoMenu != 3) {
-            opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Bem-vindo ao Construtor de Formas!"
-                    + "\n\nDigite uma opção para escolher o "
-                    + "tipo de forma que deseja criar: \n\n"
-                    + "1 - Adicionar Forma\n"
-                    + "2 - Listar Formas Ordenadas\n"
-                    + "3 - Sair"));
+
+            InterfaceUsuario interfaceUsuario = new InterfaceUsuario();
+
+            opcaoMenu = interfaceUsuario.menuPrincipal();
 
             switch (opcaoMenu) {
 
                 case 1:
-                    String opcaoTipoDeForma = JOptionPane.showInputDialog("Bem-vindo ao Construtor de Formas!"
-                            + "\n\nDigite uma opção para escolher o "
-                            + "tipo de forma que deseja criar: \n\n"
-                            + "1 - Bidimensional\n"
-                            + "2 - Tridimensional\n");
+                    opcaoTipoDeForma = interfaceUsuario.menuOpcaoTipoDeForma();
 
                     if (opcaoTipoDeForma.equals("1")) {
 
-                        String opcaoFormaBidmensional = JOptionPane.showInputDialog("Digite uma opção para escolher"
-                                + " a forma que deseja criar: \n\n"
-                                + "1 - Quadrado\n"
-                                + "2 - Triângulo\n");
+                        opcaoFormaBidmensional = interfaceUsuario.menuOpcaoFormaBidimensional();
 
                         if (opcaoFormaBidmensional.equals("1")) {
                             formas.add(new Quadrado(1, "", ""));
@@ -49,10 +44,7 @@ public class Main {
 
                     if (opcaoTipoDeForma.equals("2")) {
 
-                        String opcaoFormaTridmensional = JOptionPane.showInputDialog("Digite uma opção para escolher"
-                                + " a forma que deseja criar: \n\n"
-                                + "1 - Cubo\n"
-                                + "2 - Esfera\n");
+                        opcaoFormaTridmensional = interfaceUsuario.menuOpcaoFormaTridimensional();
 
                         if (opcaoFormaTridmensional.equals("1")) {
                             formas.add(new Cubo(0, "", ""));
@@ -65,16 +57,9 @@ public class Main {
                     break;
 
                 case 2:
-                    Collections.sort(formas);
 
-                    String output = "";
+                    interfaceUsuario.listarFormas(formas);
 
-                    for (FormaGeometrica forma : formas) {
-                        String nomedaForma = forma.getClass().getSimpleName();
-                        output += nomedaForma + "\n";
-                    }
-
-                    JOptionPane.showMessageDialog(null, output);
                     break;
 
             }
