@@ -43,4 +43,9 @@ public class Quadrado extends FormaGeometrica implements IBidmensional {
                 + "\nPerimetro: " + calcularPerimetro();
     }
 
+    @Override
+    protected void lerFoma() {
+
+    }
+
 }

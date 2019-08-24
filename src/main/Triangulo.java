@@ -87,4 +87,9 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
                 + "\nArea: " + calcularArea() + ""
                 + "\nPerimetro: " + calcularPerimetro();
     }
+
+    @Override
+    protected void lerFoma() {
+
+    }
 }

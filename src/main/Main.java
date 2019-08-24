@@ -35,7 +35,7 @@ public class Main {
                         opcaoFormaBidmensional = interfaceUsuario.menuOpcaoFormaBidimensional();
 
                         if (opcaoFormaBidmensional.equals("1")) {
-                            formas.add(new Quadrado(1, "", ""));
+                            formas.add(new Quadrado(1, "", "")); //Implementar leitura de informações das formas através do JOptionPane.
                         }
                         if (opcaoFormaBidmensional.equals("2")) {
                             formas.add(new Triangulo(0, 0, 0, 0, 0, "", ""));

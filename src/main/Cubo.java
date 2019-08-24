@@ -42,4 +42,9 @@ public class Cubo extends FormaGeometrica implements ITridmensional {
                 + "\nVolume: "+calcularVolume();
     }
 
+    @Override
+    protected void lerFoma() {
+        
+    }
+
 }
