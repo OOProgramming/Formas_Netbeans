@@ -6,12 +6,11 @@ package main;
  */
 public abstract class FormaGeometrica implements Comparable<FormaGeometrica>{
 
-    private String nome;
-    private String cor;
+    protected String nome;
+    protected String cor;
 
-    public FormaGeometrica(String cor,String nome) {
-        this.cor = cor;
-        this.nome = nome;
+    public FormaGeometrica() {
+       
     }
 
     //<editor-fold desc="Getters and Setters">

@@ -47,7 +47,11 @@ public class Main {
                         opcaoFormaTridmensional = interfaceUsuario.menuOpcaoFormaTridimensional();
 
                         if (opcaoFormaTridmensional.equals("1")) {
-                            formas.add(new Cubo(0, "", ""));
+                            
+                           Cubo cubo = new Cubo();
+                           cubo.lerFoma();
+                            
+                            formas.add(cubo);
                         }
                         if (opcaoFormaTridmensional.equals("2")) {
                             formas.add(new Esfera(0, "", ""));

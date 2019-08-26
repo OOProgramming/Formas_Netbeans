@@ -5,6 +5,8 @@
  */
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DLT1CA
@@ -13,9 +15,8 @@ public class Cubo extends FormaGeometrica implements ITridmensional {
 
     private double aresta;
 
-    public Cubo(double aresta, String cor, String nome) {
-        super(cor, nome);
-        this.aresta = aresta;
+    public Cubo() {
+    
     }
 
     //<editor-fold defaultstate="collapsed" desc="Getters and Setters">
@@ -44,7 +45,9 @@ public class Cubo extends FormaGeometrica implements ITridmensional {
 
     @Override
     protected void lerFoma() {
-        
+         this.aresta = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da aresta do Cubo: "));
+         cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
+         nome = JOptionPane.showInputDialog("Digite o nome da forma: ");
     }
 
 }
