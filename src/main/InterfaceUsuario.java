@@ -15,8 +15,7 @@ public class InterfaceUsuario {
                 + "tipo de forma que deseja criar: \n\n"
                 + "1 - Adicionar Forma\n"
                 + "2 - Listar Formas Ordenadas\n"
-                + "3 - Listar Informações da Forma"
-                + "4 - Sair"));
+                + "3 - Sair"));
 
         return opcaoMenu;
     }

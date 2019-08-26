@@ -37,9 +37,9 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
 
     @Override
     public String toString() {
-        return "Nome: "+super.getNome()+""
-                + "Cor: "+super.getCor()+""
-                + "\nRaio: " + raio+""
+        return "Nome: "+super.getNome()+"\n"
+                + "Cor: "+super.getCor()
+                + "\nRaio: " + raio
                 + "\nVolume: "+calcularVolume();
     }
 

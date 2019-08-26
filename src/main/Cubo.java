@@ -37,9 +37,9 @@ public class Cubo extends FormaGeometrica implements ITridmensional {
 
     @Override
     public String toString() {
-        return "Nome: "+super.getNome()+""
-                + "Cor: "+super.getCor()+""
-                + "\nAresta: " + aresta+""
+        return "Nome: "+super.getNome()+"\n"
+                + "Cor: "+super.getCor()
+                + "\nAresta: " + aresta
                 + "\nVolume: "+calcularVolume();
     }
 

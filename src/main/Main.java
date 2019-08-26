@@ -40,7 +40,7 @@ public class Main {
 
                             formas.add(quadrado);
                             
-                            JOptionPane.showConfirmDialog(null, quadrado.toString());
+                            JOptionPane.showMessageDialog(null, quadrado.toString());
                         }
                         if (opcaoFormaBidmensional.equals("2")) {
 
@@ -48,6 +48,8 @@ public class Main {
                             triangulo.lerFoma();
 
                             formas.add(triangulo);
+                            
+                            JOptionPane.showMessageDialog(null, triangulo.toString());
                         }
                     }
 
@@ -61,6 +63,8 @@ public class Main {
                             cubo.lerFoma();
 
                             formas.add(cubo);
+                            
+                            JOptionPane.showMessageDialog(null, cubo.toString());
                         }
                         if (opcaoFormaTridmensional.equals("2")) {
 
@@ -68,6 +72,8 @@ public class Main {
                             esfera.lerFoma();
 
                             formas.add(esfera);
+                            
+                            JOptionPane.showMessageDialog(null, esfera.toString());
                         }
 
                     }
@@ -78,7 +84,7 @@ public class Main {
                     interfaceUsuario.listarFormas(formas);
 
                     break;
-
+                    
             }
         }
     }

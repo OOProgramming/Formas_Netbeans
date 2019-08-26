@@ -37,10 +37,10 @@ public class Quadrado extends FormaGeometrica implements IBidmensional {
 
     @Override
     public String toString() {
-        return "Nome: "+super.getNome()+""
-                + "Cor: "+super.getCor()+""
-                + "\nLado: " + lado + ""
-                + "\nArea: " + calcularArea() + ""
+        return "Nome: "+super.getNome()+"\n"
+                + "Cor: "+super.getCor()
+                + "\nLado: " + lado 
+                + "\nArea: " + calcularArea()
                 + "\nPerimetro: " + calcularPerimetro();
     }
 
