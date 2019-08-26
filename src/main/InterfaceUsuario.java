@@ -15,7 +15,8 @@ public class InterfaceUsuario {
                 + "tipo de forma que deseja criar: \n\n"
                 + "1 - Adicionar Forma\n"
                 + "2 - Listar Formas Ordenadas\n"
-                + "3 - Sair"));
+                + "3 - Listar Informações da Forma"
+                + "4 - Sair"));
 
         return opcaoMenu;
     }
@@ -58,7 +59,7 @@ public class InterfaceUsuario {
         String output = "";
 
         for (FormaGeometrica forma : formas) {
-            String nomedaForma = forma.getClass().getSimpleName();
+            String nomedaForma = forma.nome;
             output += nomedaForma + "\n";
         }
 

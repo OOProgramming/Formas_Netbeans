@@ -1,7 +1,6 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,9 +14,9 @@ public class Main {
         ArrayList<FormaGeometrica> formas = new ArrayList<>();
 
         int opcaoMenu = 0;
-        String opcaoTipoDeForma = "";
-        String opcaoFormaBidmensional = "";
-        String opcaoFormaTridmensional = "";
+        String opcaoTipoDeForma;
+        String opcaoFormaBidmensional;
+        String opcaoFormaTridmensional;
 
         while (opcaoMenu != 3) {
 
@@ -35,10 +34,20 @@ public class Main {
                         opcaoFormaBidmensional = interfaceUsuario.menuOpcaoFormaBidimensional();
 
                         if (opcaoFormaBidmensional.equals("1")) {
-                            formas.add(new Quadrado(1, "", "")); //Implementar leitura de informações das formas através do JOptionPane.
+
+                            Quadrado quadrado = new Quadrado();
+                            quadrado.lerFoma();
+
+                            formas.add(quadrado);
+                            
+                            JOptionPane.showConfirmDialog(null, quadrado.toString());
                         }
                         if (opcaoFormaBidmensional.equals("2")) {
-                            formas.add(new Triangulo(0, 0, 0, 0, 0, "", ""));
+
+                            Triangulo triangulo = new Triangulo();
+                            triangulo.lerFoma();
+
+                            formas.add(triangulo);
                         }
                     }
 
@@ -47,14 +56,18 @@ public class Main {
                         opcaoFormaTridmensional = interfaceUsuario.menuOpcaoFormaTridimensional();
 
                         if (opcaoFormaTridmensional.equals("1")) {
-                            
-                           Cubo cubo = new Cubo();
-                           cubo.lerFoma();
-                            
+
+                            Cubo cubo = new Cubo();
+                            cubo.lerFoma();
+
                             formas.add(cubo);
                         }
                         if (opcaoFormaTridmensional.equals("2")) {
-                            formas.add(new Esfera(0, "", ""));
+
+                            Esfera esfera = new Esfera();
+                            esfera.lerFoma();
+
+                            formas.add(esfera);
                         }
 
                     }

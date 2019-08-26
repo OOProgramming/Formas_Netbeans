@@ -33,7 +33,7 @@ public abstract class FormaGeometrica implements Comparable<FormaGeometrica>{
 
     @Override
     public int compareTo(FormaGeometrica forma) {
-        int compareResult = this.getClass().getSimpleName().compareTo(forma.getClass().getSimpleName());
+        int compareResult = this.nome.compareTo(forma.nome);
         if (compareResult < 0) return -1;
         if (compareResult > 0) return 1;
         return 0;
