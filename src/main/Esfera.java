@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DLT1CA
@@ -8,9 +10,8 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
 
     private double raio;
 
-    public Esfera(double raio, String cor, String nome) {
-        super(cor, nome);
-        this.raio = raio;
+    public Esfera() {
+        
     }
 
 
@@ -44,7 +45,9 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
 
     @Override
     protected void lerFoma() {
-        
+         this.raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do raio da Esfera: "));
+         cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
+         nome = JOptionPane.showInputDialog("Digite o nome da forma: ");
     }
 
 }

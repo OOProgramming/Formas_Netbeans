@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DLT1CA
@@ -55,13 +57,8 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
 
     //</editor-fold>
 
-    public Triangulo(double altura, double base, double A, double B, double C, String cor, String nome) {
-        super(cor, nome);
-        this.altura = altura;
-        this.base = base;
-        this.A = A;
-        this.B = B;
-        this.C = C;
+    public Triangulo() {
+       
     }
     
 
@@ -90,6 +87,12 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
 
     @Override
     protected void lerFoma() {
-
+         this.altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura do Triângulo: "));
+         this.base = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da base do Triângulo: "));
+         this.A = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do Lado A do Triângulo: "));
+         this.B = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do Lado B do Triângulo: "));
+         this.C = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do Lado C do Triângulo: "));
+         cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
+         nome = JOptionPane.showInputDialog("Digite o nome da forma: ");
     }
 }

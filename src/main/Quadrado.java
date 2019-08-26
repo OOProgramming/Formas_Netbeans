@@ -1,5 +1,7 @@
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DLT1CA
@@ -8,9 +10,8 @@ public class Quadrado extends FormaGeometrica implements IBidmensional {
 
     private double lado;
 
-    public Quadrado(double lado, String cor, String nome) {
-        super(cor, nome);
-        this.lado = lado;
+    public Quadrado() {
+       
     }
 
     
@@ -45,7 +46,9 @@ public class Quadrado extends FormaGeometrica implements IBidmensional {
 
     @Override
     protected void lerFoma() {
-
+         this.lado = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do lado do Quadrado: "));
+         cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
+         nome = JOptionPane.showInputDialog("Digite o nome da forma: ");
     }
 
 }
