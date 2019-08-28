@@ -44,7 +44,7 @@ public class Esfera extends FormaGeometrica implements ITridmensional {
     }
 
     @Override
-    protected void lerFoma() {
+    protected void lerForma() {
          this.raio = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do raio da Esfera: "));
          cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
          nome = JOptionPane.showInputDialog("Digite o nome da forma: ");

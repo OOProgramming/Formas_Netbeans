@@ -39,5 +39,5 @@ public abstract class FormaGeometrica implements Comparable<FormaGeometrica>{
         return 0;
     }
     
-    protected abstract void lerFoma();
+    protected abstract void lerForma();
 }

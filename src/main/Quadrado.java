@@ -45,7 +45,7 @@ public class Quadrado extends FormaGeometrica implements IBidmensional {
     }
 
     @Override
-    protected void lerFoma() {
+    protected void lerForma() {
          this.lado = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do lado do Quadrado: "));
          cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
          nome = JOptionPane.showInputDialog("Digite o nome da forma: ");

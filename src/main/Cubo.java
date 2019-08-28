@@ -44,7 +44,7 @@ public class Cubo extends FormaGeometrica implements ITridmensional {
     }
 
     @Override
-    protected void lerFoma() {
+    protected void lerForma() {
          this.aresta = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da aresta do Cubo: "));
          cor = JOptionPane.showInputDialog("Digite a cor da forma: ");
          nome = JOptionPane.showInputDialog("Digite o nome da forma: ");

@@ -86,7 +86,7 @@ public class Triangulo extends FormaGeometrica implements IBidmensional {
     }
 
     @Override
-    protected void lerFoma() {
+    protected void lerForma() {
          this.altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura do Triângulo: "));
          this.base = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da base do Triângulo: "));
          this.A = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do Lado A do Triângulo: "));

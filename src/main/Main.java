@@ -36,7 +36,7 @@ public class Main {
                         if (opcaoFormaBidmensional.equals("1")) {
 
                             Quadrado quadrado = new Quadrado();
-                            quadrado.lerFoma();
+                            quadrado.lerForma();
 
                             formas.add(quadrado);
                             
@@ -45,7 +45,7 @@ public class Main {
                         if (opcaoFormaBidmensional.equals("2")) {
 
                             Triangulo triangulo = new Triangulo();
-                            triangulo.lerFoma();
+                            triangulo.lerForma();
 
                             formas.add(triangulo);
                             
@@ -60,7 +60,7 @@ public class Main {
                         if (opcaoFormaTridmensional.equals("1")) {
 
                             Cubo cubo = new Cubo();
-                            cubo.lerFoma();
+                            cubo.lerForma();
 
                             formas.add(cubo);
                             
@@ -69,7 +69,7 @@ public class Main {
                         if (opcaoFormaTridmensional.equals("2")) {
 
                             Esfera esfera = new Esfera();
-                            esfera.lerFoma();
+                            esfera.lerForma();
 
                             formas.add(esfera);
                             
